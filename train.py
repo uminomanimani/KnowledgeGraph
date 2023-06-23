@@ -75,7 +75,7 @@ if __name__ == '__main__':
             test_dataset = MyDataset('./dataset/test.txt', label2id=label2id)
             test_loader = DataLoader(
                 test_dataset, batch_size=Config.batch_size, shuffle=True)
-            model.to('cpu')
+            model = model.to('cpu')
 
             correct = 0.0
             total = 0.0
