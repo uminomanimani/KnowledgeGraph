@@ -31,7 +31,7 @@ def extract_relation(text : str, entity1 : str, entity2 : str) -> str:
 
     output = model(input_ids, attention_mask, segment_id)
 
-    threshold = 0.7
+    threshold = 0.8
     probablity = torch.softmax(output, dim=1)
     diff = probablity - threshold
     if torch.all(diff < 0):
