@@ -104,14 +104,3 @@ class REDataset(Dataset):
     
     def __getitem__(self, index):
         return self.sentences[index], self.sentences_level_label[index], self.masks[index], self.segments_id[index]
-
-if __name__ == '__main__':
-    label2id = establish_label_dict(Config.path_train)
-    train_dataset = REDataset(Config.path_train, label2id=label2id)
-
-    train_loader = DataLoader(
-        train_dataset, batch_size=1, shuffle=True)
-    
-    for batch in train_loader:
-        x, y, z, a = batch
-        pass

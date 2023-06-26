@@ -74,6 +74,3 @@ class NERDataset(Dataset):
 
     def __getitem__(self, index):
         return self.sentences[index], self.sentences_token_level_label[index], self.masks[index], self.segments_id[index]
-
-if __name__ == '__main__':
-    pass

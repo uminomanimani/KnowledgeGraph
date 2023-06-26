@@ -6,7 +6,7 @@ from NamedEntityRecognition.data_loader import NERDataset, establish_label_dict
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
-if __name__ == '__main__':
+def train_ner():
     label2id = establish_label_dict(Config.path_train)
     train_dataset = NERDataset(Config.path_train, label2id=label2id)
     train_loader = DataLoader(

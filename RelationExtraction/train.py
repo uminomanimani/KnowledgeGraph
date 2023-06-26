@@ -6,7 +6,7 @@ from RelationExtraction.data_loader import REDataset, establish_label_dict
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
-if __name__ == '__main__':
+def train_re():
     label2id = establish_label_dict(Config.path_train)
 
     train_dataset = REDataset(Config.path_train, label2id=label2id)
