@@ -3,6 +3,7 @@ Bert/pytorch_model.bin
 Bert/vocab.txt
 model/
 .vscode/
+test.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

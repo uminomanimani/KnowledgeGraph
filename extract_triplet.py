@@ -1,4 +1,4 @@
-from NamedEntityRecognition.extract_entites import extract_entites
+from NamedEntityRecognition.extract_entities import extract_entities
 from RelationExtraction.extract_relation import extract_relation
 
 def extract_triplet(text='长虹电器股份有限公司，创始人是倪润峰。长虹电器股份有限公司，简称长虹。长虹电器股份有限公司总部位于绵阳市。长虹电器股份有限公司董事长是赵勇。'):
@@ -9,7 +9,7 @@ def extract_triplet(text='长虹电器股份有限公司，创始人是倪润峰
 
     for sentence in sentences:
         entities = []
-        l = extract_entites(sentence)
+        l = extract_entities(sentence)
         for x in l:
             if x not in entities:
                 entities.append(x)
